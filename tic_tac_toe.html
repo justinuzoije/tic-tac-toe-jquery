@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        $(function(){
+          $(".square").click(function () {
+            $(this).text(function(i, text){
+              return text === "-" ? "O" : "-";
+            })
+          });
+        })
+
+        // $(".square").on('click', '.remove', function() {
+        //
+        //   //A variable to store what we are looking for
+        //   //This refers to what we clocked on in this case the remove button
+        //   //Closest looks for the closest relative to the button that is the il type
+        //   var self = $(this).closest("li");
+        //
+        //   //This removes the li belonging to the button
+        //   self.remove();
+        // });
+      });
+    </script>
+  </head>
+  <body>
+    <button type="button" class="square">-</button>
+    <button type="button" class="square">-</button>
+    <button type="button" class="square">-</button>
+    <br>
+    <button type="button" class="square">-</button>
+    <button type="button" class="square">-</button>
+    <button type="button" class="square">-</button>
+    <br>
+    <button type="button" class="square">-</button>
+    <button type="button" class="square">-</button>
+    <button type="button" class="square">-</button>
+  </body>
+</html>
