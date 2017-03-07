@@ -7,13 +7,24 @@
     <script>
       $(document).ready(function() {
 
-        $(function(){
-          $(".square").click(function () {
-            $(this).text(function(i, text){
-              return text === "-" ? "O" : "-";
-            })
-          });
-        })
+        // $(function(){
+        //   $(".square").click(function () {
+        //     $(this).text(function(i, text){
+        //       // return text === "-" ? "O" : "-";
+        //       return text === "-" ? "O" ? "X" : "-";
+        //     })
+        //   });
+        // })
+        $(".square").click(function() {
+          if ($(this).text() == "-") {
+            $(this).text("o");
+          } else if ($(this).text() == "o") {
+            $(this).text("x");
+          } else {
+            $(this).text("-");
+          }
+        });
+      
 
         // $(".square").on('click', '.remove', function() {
         //
